@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+$font: "Helvetica Neue", "Helvetica", "Open Sans", sans-serif;
+$red: #d34848;
+$yellow: #ffb33f;
+$white: #ffffff;
+$black: #171717;
+$blue: #1fe1e9;
+$purple: #5e33d1;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  text-decoration: none;
+}
+
+.nav {
+  margin: 50px 50px;
+  position: fixed;
+  top: 0;
+  height: 150px;
+  width: 100vw;
+  z-index: 50;
+}
+
+.nav h2 {
+  color: $white;
+  float: left;
+  font-size: 2rem;
+}
+
+.hamburger {
+  margin-right: 10px;
+  float: left;
+  height: 45px;
+  width: auto;
+  background: transparent;
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.nav-botton {
+  float: right;
+}
+
+.App {
+  font-family: $font;
+  text-align: center;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.small {
+  height: 75vh;
+}
+
+.footer {
+  height: 50vh;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.hero-content {
+  color: $white;
+}
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../src/img/Image1.png);
+  background-size: cover;
+  z-index: -1;
+}
+
+.text-content {
+  vertical-align: middle;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.6rem;
+  letter-spacing: 6.5px;
+  color: $white;
+}
+
+p {
+  color: $white;
+  letter-spacing: 3.2px;
+}
+
+.sound p {
+  color: $black;
+  font-size: 1.5rem;
+  letter-spacing: 5.1px;
+}
+
+.sound h1 {
+  letter-spacing: 7.4px;
+}
+
+// RED PAGE
+
+.sound {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  min-height: 100vh;
+}
+
+.sound-content {
+  width: 40vw;
+}
+
+.speaker1 {
+  height: 43vh;
+  width: auto;
+  float: right;
+  transform: translateY(-75px);
+}
+
+.speaker2 {
+  height: 43vh;
+  width: auto;
+  float: right;
+  transform: translateY(75px);
+}
+
+.roundbutton {
+  font-family: font;
+  font-size: 27px;
+  letter-spacing: 2.7px;
+  color: $white;
+  text-align: center;
+  line-height: 5.5;
+  display: block;
+  height: 145px;
+  width: 145px;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 255, 255);
+  float: right;
+}
+
+//YELLOW PAGE
+
+.reveal {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.reveal-content {
+  float: right;
+  z-index: 5;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: block;
+  z-index: 10;
+}
+
+.reveal .background-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  //background-image: url(../src/img/Image4.png);
+  //background-size: cover;
+}
+
+//PERK PAGE
+
+hr.animated {
+  animation-delay: 2s;
+  width: 80px;
+  animation: expand 2s ease-in-out;
+}
+hr.red {
+  border: 2px solid $red;
+}
+hr.yellow {
+  border: 2px solid $yellow;
+}
+hr.blue {
+  border: 2px solid $blue;
+}
+
+@keyframes expand {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80px;
+  }
+}
+
+.perk-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  margin-top: 20%;
+}
+
+.perks h3 {
+  font-weight: 400;
+  font-size: 2.7rem;
+}
+
+.perks p {
+  margin-top: 10%;
+  font-size: 1.5rem;
+}
+
+#left {
+  color: $red;
+  width: 20vw;
+  margin: 15px;
+}
+
+#mid {
+  color: $yellow;
+  width: 20vw;
+  margin: 15px;
+}
+
+#right {
+  color: $blue;
+  width: 20vw;
+  margin: 15px;
+}
+
+//REVIEW PAGE
+.review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.images-group-review {
+  margin: 0;
+  padding: 0;
+  width: 35vw;
+}
+
+.review-group {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.review-group-display {
+  margin-top: 30px;
+  display: flex;
+  text-align: left;
+}
+
+#review-block {
+  width: 20vw;
+}
+
+.reivew h1 {
+  letter-spacing: 7.4px;
+  font-weight: 800;
+}
+
+.review h2 {
+  font-size: 2.5rem;
+}
+
+.review h3 {
+  color: $white;
+  letter-spacing: 3.5px;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.review p {
+  color: $black;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.speaker3 {
+  width: 50vh;
+  height: auto;
+  margin-left: -55px;
+  transform: translateY(130px);
+}
+
+.speaker4 {
+  width: 50vh;
+  height: auto;
+  margin-left: 55px;
+  transform: translateY(-70px);
+}
+
+.red {
+  background-color: $red;
+}
+
+.yellow {
+  background-color: $yellow;
+}
+
+.black {
+  background-color: $black;
+}
+
+.blue {
+  background-color: $blue;
+}
+
+.purple {
+  background-color: $purple;
+}
+
+// BUTTONS
+$bg-color: #222;
+
+[class*="btn-"] {
+  outline: 0;
+  border-radius: 50px;
+  font-size: 0.8em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 4px;
+  overflow: hidden;
+  position: relative; //absolute
+  padding: 2em 3em;
+  margin: 4em;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 500ms ease-in-out;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+[class*="btn-mix"] {
+  &::after {
+    background: $bg-color;
+    border-radius: 120px;
+    content: attr(data-text);
+    color: #fff;
+    padding: 1.6em 2.5em;
+    top: 0.4em;
+    left: 0.5em;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  &::before {
+    background: transparent;
+    border-radius: 100%;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 1em 2em 3em rgba(255, 50, 0, 0.5),
+      4em 0em 2em 2em rgba(155, 50, 0, 0.6),
+      -4em -2em 2em 2em rgba(255, 0, 150, 0.5),
+      -4em 2em 2em 4em rgba(0, 0, 150, 0.5),
+      0 -3em 2em 3em rgba(120, 250, 0, 0.5),
+      2em -1em 2em 2em rgba(50, 10, 200, 0.5);
+    width: 0;
+    height: 0;
+    animation: mix 5s linear infinite;
+  }
+}
+
+@keyframes mix {
+  30% {
+    box-shadow: 0 -1em 2em 3em rgba(255, 0, 200, 0.5),
+      4em -1em 2em 3em rgba(255, 50, 0, 0.8),
+      -4em 2em 3em 2em rgba(155, 200, 0, 0.5),
+      -4em -2em 2em 2em rgba(200, 0, 150, 0.6),
+      0 3em 2em 2em rgba(20, 250, 0, 0.5),
+      2em 1em 2em 2em rgba(50, 10, 250, 0.5);
+  }
+
+  60% {
+    box-shadow: 2em 1em 2em 3em rgba(55, 0, 200, 0.5),
+      3em 1em 2em 3em rgba(25, 150, 0, 0.6),
+      3em -2em 3em 3em rgba(155, 200, 0, 0.5),
+      -4em 2em 2em 3em rgba(200, 0, 50, 0.6),
+      0 -3em 2em 3em rgba(200, 250, 0, 0.5),
+      -2em 1em 2em 3em rgba(50, 210, 250, 0.6);
+  }
+}
+
+.btn-mix-noborder {
+  &::after {
+    background: transparent !important;
+    color: $bg-color !important;
+  }
+}
+
+.btn-mix-noRadius {
+  border-radius: 0 !important;
+  &::after,
+  &::before {
+    border-radius: 0 !important;
+  }
+}
+
+//REVEAL
+
+#bridge {
+  display: block;
+  margin: 0 auto;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg");
+  background-image: -webkit-image-set(
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg")
+      1x,
+    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943-2x.jpg")
+      2x
+  );
+  background-size: cover;
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  cursor: crosshair;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png)
+      53 53,
+    crosshair;
+}
+#bridgeContainer {
+  text-align: center;
+  font-family: Avenir, sans-serif;
+}
+#bridgeContainer figcaption {
+  margin-top: 2rem;
+}
