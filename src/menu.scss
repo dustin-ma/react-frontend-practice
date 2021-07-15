@@ -1,3 +1,4 @@
+$font: "Helvetica Neue", "Helvetica", "Open Sans", sans-serif;
 $red: #d34848;
 $yellow: #ffb33f;
 $white: #ffffff;
@@ -8,6 +9,12 @@ $purple: #5e33d1;
 * {
   margin: 0;
   padding: 0;
+}
+
+.logo {
+  text-decoration: none;
+  color: $white;
+  mix-blend-mode: difference;
 }
 
 .nav {
@@ -30,9 +37,10 @@ $purple: #5e33d1;
 }
 
 .hamburger {
+  margin-top: -13px;
   margin-right: 10px;
   float: left;
-  height: 45px;
+  height: 50px;
   width: auto;
   background: transparent;
 }
@@ -55,18 +63,24 @@ $purple: #5e33d1;
   width: 100%;
   clip-path: circle(0px at calc(0% + 100px) 100px);
   background: #000;
-
   transition: all 0.3s ease-in-out;
+  z-index: -5;
 }
 #active:checked ~ .btn-wrapper {
   clip-path: circle(250px at 100px 100px);
+}
+
+.nav h2 {
+  margin-left: 5%;
+  margin-top: 1%;
+  z-index: 99;
 }
 .menu-btn {
   position: absolute;
   z-index: 2;
   left: 20px;
   /* left: 20px; */
-  top: 20px;
+  top: 23px;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -82,9 +96,9 @@ $purple: #5e33d1;
 .btn-wrapper ul {
   position: absolute;
   top: 13%;
-  left: 6%;
+  left: 8%;
   list-style: none;
-  text-align: center;
+  text-align: left;
 }
 .btn-wrapper ul li {
   margin: 0 0;

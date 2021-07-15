@@ -1,12 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
+import { Curtains } from "react-curtains";
 import App from "./App";
+
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Curtains
+      pixelRatio={Math.min(1.5, window.devicePixelRatio)}
+      autoRender={false} // we'll use gsap ticker in App.js instead
+    >
+      <App />
+    </Curtains>
   </React.StrictMode>,
   document.getElementById("root")
 );

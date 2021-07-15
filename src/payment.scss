@@ -1,0 +1,120 @@
+$font: "Helvetica Neue", "Helvetica", "Open Sans", sans-serif;
+$red: #d34848;
+$yellow: #ffb33f;
+$white: #ffffff;
+$black: #171717;
+$blue: #1fe1e9;
+$purple: #5e33d1;
+
+.payment-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin-left: 15vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.payment-container label {
+  font-size: 7px;
+  font-weight: bold;
+}
+
+.payment-container a {
+  width: 100px;
+  text-align: center;
+  background-color: $red;
+  float: left;
+}
+
+.payment-container p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.terms {
+  width: 28%;
+  display: block;
+}
+
+.plan-select {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+}
+
+.radio-group {
+  margin: 0;
+  padding: 0;
+}
+
+.radio-group label {
+  margin-left: 1%;
+  margin-right: 6%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  height: 35%;
+  width: 80%;
+  margin-bottom: 0%;
+}
+
+.input-billing {
+  width: 35%;
+  margin-right: 10%;
+}
+
+.input-credit {
+  width: 35%;
+}
+
+.payment-container h1 {
+  color: $black;
+}
+
+.payment-container p {
+  width: 100%;
+  color: $black;
+}
+
+input[type="text"],
+select {
+  z-index: 999;
+  display: inline-block;
+  border: 2px solid $black;
+  border-bottom-color: $purple;
+  line-height: 1.5;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  border-bottom: 2px solid $purple !important;
+}
+
+.input-group label {
+  margin-top: 15px;
+  margin-right: 0;
+  padding: 0;
+  display: inline-block;
+  width: 50%;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+#city {
+  width: 48%;
+}
+#postal {
+  width: 48%;
+  float: right;
+}
+#exp-month {
+  width: 48%;
+}
+#exp-year {
+  width: 48%;
+  float: right;
+}

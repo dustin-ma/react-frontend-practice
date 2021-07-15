@@ -9,41 +9,61 @@ $blue: #1fe1e9;
 $purple: #5e33d1;
 
 * {
-  margin: 0;
-  padding: 0;
   font-size: 100%;
   text-decoration: none;
 }
 
-.nav {
-  margin: 50px 50px;
+.Slideshow {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+
+  font-family: $font;
+  font-size: 3em;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.Slideshow h1 {
+  text-align: center;
+}
+
+.Slideshow .title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.Slideshow .subtext {
+  width: 50%;
+}
+
+.Slideshow p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  letter-spacing: 3.2px;
+}
+
+.Slideshow img {
+  display: none;
+}
+
+.curtains-canvas {
   position: fixed;
   top: 0;
-  height: 150px;
+  left: 0;
   width: 100vw;
-  z-index: 50;
-}
-
-.nav h2 {
-  color: $white;
-  float: left;
-  font-size: 2rem;
-}
-
-.hamburger {
-  margin-right: 10px;
-  float: left;
-  height: 45px;
-  width: auto;
-  background: transparent;
-}
-
-.invert {
-  filter: invert(100%);
-}
-
-.nav-botton {
-  float: right;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .App {
@@ -114,6 +134,10 @@ p {
   letter-spacing: 7.4px;
 }
 
+.sound a {
+  float: left;
+}
+
 // RED PAGE
 
 .sound {
@@ -161,17 +185,26 @@ p {
 //YELLOW PAGE
 
 .reveal {
-  display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   text-align: left;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
+  background-image: url(../src/img/Image4@2x.png);
+  background-size: cover;
+  background-position: 100% 25%;
 }
 
 .reveal-content {
-  float: right;
+  position: absolute;
+  margin-left: 50%;
+  margin-top: 30%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
   z-index: 5;
 }
 
@@ -179,20 +212,9 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
   display: block;
-  z-index: 10;
-}
-
-.reveal .background-image2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  //background-image: url(../src/img/Image4.png);
-  //background-size: cover;
 }
 
 //PERK PAGE
@@ -221,13 +243,26 @@ hr.blue {
   }
 }
 
+.perks {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+.perk-content {
+  margin: auto;
+  vertical-align: middle;
+  text-align: left;
+  width: 60vw;
+}
+
 .perk-group {
+  margin-top: 5%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: $white;
-  margin-top: 20%;
 }
 
 .perks h3 {
@@ -242,20 +277,37 @@ hr.blue {
 
 #left {
   color: $red;
-  width: 20vw;
-  margin: 15px;
+  width: 33%;
+  margin-right: 30px;
+}
+
+#left2 {
+  color: $white;
+  width: 33%;
+  margin-right: 30px;
 }
 
 #mid {
   color: $yellow;
-  width: 20vw;
-  margin: 15px;
+  width: 33%;
+  margin-right: 30px;
 }
 
 #right {
   color: $blue;
-  width: 20vw;
-  margin: 15px;
+  width: 33%;
+}
+
+#left h1 {
+  color: $red;
+}
+
+#mid h1 {
+  color: $yellow;
+}
+
+#right h1 {
+  color: $blue;
 }
 
 //REVIEW PAGE
@@ -327,6 +379,75 @@ hr.blue {
   transform: translateY(-70px);
 }
 
+//PRICING
+
+.pricing {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-c {
+  margin: auto;
+}
+
+.pricing-group {
+  //margin: 0 auto;
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.prcing-group p {
+  color: $white;
+}
+
+.title {
+  width: 70%;
+  margin-bottom: 20%;
+  margin-left: 15%;
+  text-align: left;
+}
+
+//GET NOW PAGE
+
+.now {
+  display: flex;
+}
+
+.get-now {
+  margin: auto;
+  width: 60%;
+}
+
+.get-now-btn {
+  margin: auto;
+}
+
+.now a {
+  height: 15px;
+  width: 10vw;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+//FOOTER
+
+.footer {
+  display: flex;
+  overflow: hidden;
+}
+.bottom-text {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  bottom: -350px;
+}
+
 .red {
   background-color: $red;
 }
@@ -347,123 +468,85 @@ hr.blue {
   background-color: $purple;
 }
 
+.cta-button {
+  margin-top: 1vh;
+  margin-right: 8vw;
+  float: right;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #faf8f8;
+  padding: 1em 2em;
+  border: none;
+  color: rgb(12, 12, 12);
+  font-size: 0.8em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+
+.cta-button:hover {
+  background: #f72359;
+  color: $white;
+}
+
+.cta-button span {
+  position: relative;
+  pointer-events: none;
+}
+.cta-button::before {
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #6d3cdf, transparent);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+.cta-button:hover::before {
+  --size: 400px;
+}
+
 // BUTTONS
 $bg-color: #222;
 
-[class*="btn-"] {
-  outline: 0;
-  border-radius: 50px;
-  font-size: 0.8em;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  letter-spacing: 4px;
-  overflow: hidden;
-  position: relative; //absolute
-  padding: 2em 3em;
-  margin: 4em;
-  text-transform: uppercase;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 500ms ease-in-out;
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-  }
-  &:hover,
-  &:focus {
-    background: rgba(255, 255, 255, 0.8);
-  }
+//Image Slider Dots
+.dot {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  z-index: 99;
+  background: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px #fff;
+}
+.dot.a1 {
+  margin-left: -20px;
+}
+.dot.a2 {
+  margin-left: 0px;
+}
+.dot.a3 {
+  margin-left: 20px;
 }
 
-[class*="btn-mix"] {
-  &::after {
-    background: $bg-color;
-    border-radius: 120px;
-    content: attr(data-text);
-    color: #fff;
-    padding: 1.6em 2.5em;
-    top: 0.4em;
-    left: 0.5em;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  &::before {
-    background: transparent;
-    border-radius: 100%;
-    top: 50%;
-    left: 50%;
-    box-shadow: 0 1em 2em 3em rgba(255, 50, 0, 0.5),
-      4em 0em 2em 2em rgba(155, 50, 0, 0.6),
-      -4em -2em 2em 2em rgba(255, 0, 150, 0.5),
-      -4em 2em 2em 4em rgba(0, 0, 150, 0.5),
-      0 -3em 2em 3em rgba(120, 250, 0, 0.5),
-      2em -1em 2em 2em rgba(50, 10, 200, 0.5);
-    width: 0;
-    height: 0;
-    animation: mix 5s linear infinite;
-  }
+.dot.a1:hover {
+  background: #fff;
 }
-
-@keyframes mix {
-  30% {
-    box-shadow: 0 -1em 2em 3em rgba(255, 0, 200, 0.5),
-      4em -1em 2em 3em rgba(255, 50, 0, 0.8),
-      -4em 2em 3em 2em rgba(155, 200, 0, 0.5),
-      -4em -2em 2em 2em rgba(200, 0, 150, 0.6),
-      0 3em 2em 2em rgba(20, 250, 0, 0.5),
-      2em 1em 2em 2em rgba(50, 10, 250, 0.5);
-  }
-
-  60% {
-    box-shadow: 2em 1em 2em 3em rgba(55, 0, 200, 0.5),
-      3em 1em 2em 3em rgba(25, 150, 0, 0.6),
-      3em -2em 3em 3em rgba(155, 200, 0, 0.5),
-      -4em 2em 2em 3em rgba(200, 0, 50, 0.6),
-      0 -3em 2em 3em rgba(200, 250, 0, 0.5),
-      -2em 1em 2em 3em rgba(50, 210, 250, 0.6);
-  }
+.dot.a2:hover {
+  background: #fff;
 }
-
-.btn-mix-noborder {
-  &::after {
-    background: transparent !important;
-    color: $bg-color !important;
-  }
-}
-
-.btn-mix-noRadius {
-  border-radius: 0 !important;
-  &::after,
-  &::before {
-    border-radius: 0 !important;
-  }
-}
-
-//REVEAL
-
-#bridge {
-  display: block;
-  margin: 0 auto;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg");
-  background-image: -webkit-image-set(
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943.jpg")
-      1x,
-    url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/calgary-bridge-1943-2x.jpg")
-      2x
-  );
-  background-size: cover;
-  width: 100%;
-  max-width: 750px;
-  height: auto;
-  cursor: crosshair;
-  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/circular-cursor.png)
-      53 53,
-    crosshair;
-}
-#bridgeContainer {
-  text-align: center;
-  font-family: Avenir, sans-serif;
-}
-#bridgeContainer figcaption {
-  margin-top: 2rem;
+.dot.a3:hover {
+  background: #fff;
 }
