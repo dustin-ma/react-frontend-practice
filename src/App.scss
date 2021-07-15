@@ -468,6 +468,12 @@ hr.blue {
   background-color: $purple;
 }
 
+#hero-btn {
+  margin: auto;
+  height: 30px;
+  width: 100px;
+}
+
 .cta-button {
   margin-top: 1vh;
   margin-right: 8vw;
@@ -549,4 +555,63 @@ $bg-color: #222;
 }
 .dot.a3:hover {
   background: #fff;
+}
+
+//2ND BTN
+
+[class*="btn-"] {
+  margin: auto;
+  outline: 0;
+  border-radius: 50px;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 4px;
+  overflow: hidden;
+  position: relative; //absolute
+  padding: 2em 3em;
+  margin: 4em;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 500ms ease-in-out;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #ff4e50 0%,
+    #f9d423 51%,
+    #ff4e50 100%
+  );
+}
+.btn-grad {
+  height: 35px;
+  width: 115px;
+  margin: 10px;
+  padding: 15px 45px;
+  font-size: 1rem;
+  text-align: center;
+
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 30px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

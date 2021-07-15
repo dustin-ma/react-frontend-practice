@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Plane, useCurtains } from "react-curtains";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { vertexShader, fragmentShader } from "../shaders/shaders";
 import Image1 from "../img/Image1.png";
@@ -9,6 +10,18 @@ import Image3 from "../img/Image3.png";
 import "../App.scss";
 
 function Slider() {
+  //button mapping
+  useEffect(() => {
+    document.querySelector(".cta-button").onmousemove = function (e) {
+      var x = e.pageX - e.target.offsetLeft;
+      var y = e.pageY - e.target.offsetTop - e.target.scrollTop;
+      console.log(e.scrollTop);
+      e.target.style.setProperty("--x", x + "px");
+      e.target.style.setProperty("--y", y + "px");
+    };
+  }, []);
+
+  //Slider WebGL setup
   const [plane, setPlane] = useState(null);
 
   const slideshowInner = useRef(null);
@@ -137,6 +150,10 @@ function Slider() {
               comfort of your own home.
             </p>
           </div>
+
+          <a href="/payment" className="btn-grad">
+            TRY IT NOW
+          </a>
         </div>
 
         <img

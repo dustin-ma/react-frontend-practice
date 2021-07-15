@@ -81,7 +81,7 @@ function SoundPage() {
         <h1>SUPERIOR SOUND</h1>
         <p>Experience live versions of your favourite songs.</p>
         <br />
-        <a href="#" className="cta-button">
+        <a href="/payment" className="btn-grad">
           TRY IT NOW
         </a>
         <a type="button" class="roundbutton" href="#">
@@ -160,7 +160,11 @@ function RevealPage() {
       <div className="reveal-content" id="">
         <h1>FRONT ROW SEATS</h1>
         <p>Experience concerts up close and personal.</p>
+        <a href="/payment" className="btn-grad">
+          TRY IT NOW
+        </a>
       </div>
+
       <div>
         <canvas height="1080" width="1920" ref={canvas} />
       </div>
