@@ -78,7 +78,7 @@ function Payment() {
           By continuing, I acknowledge that I’ve read and agree to the Terms of
           Service & Privacy Policy.
         </p>
-        <a href="#" className="cta-button">
+        <a href="/pricing" className="cta-button">
           DOWNLOAD
         </a>
       </div>

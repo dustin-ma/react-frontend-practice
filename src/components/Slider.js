@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Plane, useCurtains } from "react-curtains";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { vertexShader, fragmentShader } from "../shaders/shaders";
 import Image1 from "../img/Image1.png";
@@ -53,7 +52,7 @@ function Slider() {
       onClickButton(rndInt);
       console.log("Slide changed!");
     }, 10000);
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // eslint-disable-next-line
   }, []);
 
   const activeTex = useRef(null);

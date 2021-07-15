@@ -1,9 +1,9 @@
-import React, { Fragment, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "./components/Header";
 import Payment from "./components/Payment";
 import Pricing from "./components/Pricing";
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import gsap from "gsap";
 import { useCurtains } from "react-curtains";
 import Slider from "./components/Slider";
@@ -84,7 +84,7 @@ function SoundPage() {
         <a href="/payment" className="btn-grad">
           TRY IT NOW
         </a>
-        <a type="button" class="roundbutton" href="#">
+        <a type="button" class="roundbutton" href="/payment">
           CLICK
         </a>
       </div>
@@ -269,7 +269,7 @@ function DownloadPage() {
         <p>Purchase and download the app.</p>
       </div>
       <div className="get-now-btn">
-        <a href="#" className="cta-button">
+        <a href="/payment" className="cta-button">
           TRY IT NOW
         </a>
       </div>

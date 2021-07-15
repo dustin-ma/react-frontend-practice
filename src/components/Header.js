@@ -19,7 +19,7 @@ function Header() {
     <div className="nav">
       <input type="checkbox" id="active" />
       <label for="active" class="menu-btn">
-        <img src={Hamburger} className="hamburger invert"></img>
+        <img src={Hamburger} className="hamburger invert" alt="hamburger"></img>
       </label>
 
       <div class="btn-wrapper">
