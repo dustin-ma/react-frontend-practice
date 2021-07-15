@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Payment from "./components/Payment";
 import Pricing from "./components/Pricing";
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import gsap from "gsap";
 import { useCurtains } from "react-curtains";
 import Slider from "./components/Slider";
@@ -81,9 +81,9 @@ function SoundPage() {
         <h1>SUPERIOR SOUND</h1>
         <p>Experience live versions of your favourite songs.</p>
         <br />
-        <a href="/payment" className="btn-grad">
-          TRY IT NOW
-        </a>
+        <Link to="/payment">
+          <a className="btn-grad">TRY IT NOW</a>
+        </Link>
         <a type="button" class="roundbutton" href="/payment">
           CLICK
         </a>
@@ -160,9 +160,9 @@ function RevealPage() {
       <div className="reveal-content" id="">
         <h1>FRONT ROW SEATS</h1>
         <p>Experience concerts up close and personal.</p>
-        <a href="/payment" className="btn-grad">
-          TRY IT NOW
-        </a>
+        <Link to="/payment">
+          <a className="btn-grad">TRY IT NOW</a>
+        </Link>
       </div>
 
       <div>
@@ -269,9 +269,9 @@ function DownloadPage() {
         <p>Purchase and download the app.</p>
       </div>
       <div className="get-now-btn">
-        <a href="/payment" className="cta-button">
-          TRY IT NOW
-        </a>
+        <Link to="/payment">
+          <a className="cta-button">TRY IT NOW</a>
+        </Link>
       </div>
     </div>
   );

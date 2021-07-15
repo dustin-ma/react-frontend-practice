@@ -25,10 +25,14 @@ function Header() {
       <div class="btn-wrapper">
         <ul>
           <li>
-            <a href="/payment">Payment</a>
+            <Link to="/payment">
+              <a>Payment</a>
+            </Link>
           </li>
           <li>
-            <a href="/pricing">Pricing</a>
+            <Link to="/pricing">
+              <a>Pricing</a>
+            </Link>
           </li>
         </ul>
       </div>
